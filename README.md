@@ -8,7 +8,10 @@ The application requires the use of the NPM packages "mysql" and "inquirer".
 
 ![App Start](/images/capture1.jpg)
 
-*Upon running the application, the user will be presented with a list of available items to buy.
+* Upon running the application, the user will be presented with a list of available items to buy. The user will be presented with a prompt to enter the product ID number that they would like to purchase. There is validiation built into the inquirer prompt to only allow the user to select numbers of items that actually exist.
 
 ![Product List](/images/capture2.jpg)
 
+* After picking a product ID, the user is asked what quantity of the item they would like to buy. There is validation on two fronts. The user is only allowed to enter integer values from 1-5000. Also, after they enter a value in that range, the application checks the amount of available inventory by pulling that information from the SQL database.
+
+![Product List](/images/capture3.jpg)
