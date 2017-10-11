@@ -1,4 +1,4 @@
-# Bamazon: A Customer Facing Application
+# Bamazon: a Customer Facing Application
 
 This is an Command Line application built in node.js that mimics on online retailer like Amazon.com
 Below you will find screenshots and explinations of the user experience. The application runs Javascript through node and uses an SQL database to feed data into the application.
@@ -18,10 +18,23 @@ The application requires the use of the NPM packages "mysql" and "inquirer".
 
 ![Product List](/images/capture3.jpg)
 
-* In the instance below, the user has selected 28 units of product ID number 6 (SNES Mini). The application has informed the user that there are not enough products in stock after checking the sql database. The user is then prompted to decrease their order to proceed.
+* In the instance below, the user has selected 28 units of product ID number 6 (SNES Mini). The application has informed the user that there are not enough products in stock after checking the SQL database. The user is then prompted to decrease their order to proceed.
 
 ![Product List](/images/capture4.jpg)
 
 * After the user has selected a quantity value that is less than the inventory on hand, the application informs the user that their order has been removed from inventory and is on it's way. It also informs them of the price of their purchase.
 
 ![Product List](/images/capture5.jpg)
+
+## SQL Database
+
+The application uses a simple SQL database of products to both populate the application with items for the user to buy and to track remaining inventory of products. The application uses the NPM package mysql to interact with the database and manipulate it accordingly.
+
+* Below is a screenshot of the database that the application is pulling from prior to the same purchase above.
+
+![Product List](/images/capture6.jpg)
+
+* The next screenshot shows the database after the purchase has been completed. The stock_quantity has been modified from 9 to 6 to reflect that the user purchased 3 SNES Mini Classics.
+
+
+![Product List](/images/capture7.jpg)
