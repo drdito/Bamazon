@@ -6,7 +6,7 @@ var inquirer = require('inquirer');
 var connection = mysql.createConnection({
   host     : 'localhost',
   user     : 'root',
-  password : 'secret',
+  password : 'Dantheman065$',
   port : 3306,
   database : 'bamazon'
 });
@@ -68,8 +68,8 @@ function quantity(id) {
     ])
     .then(function(data) {
       if (parseInt(data.quantity) <= res[0].stock_quantity) {
-        var totalCost = data.quantity * parseFloat(res[0].price, 2);
-        console.log("Successful Purchase! \n The total cost for your order is: $" + totalCost);
+        var totalCost = data.quantity * parseFloat(res[0].price);
+        console.log("Successful Purchase! \n The total cost for your order is: $" + totalCost.toFixed(2));
         var newQuantity = res[0].stock_quantity - parseInt(data.quantity);
 
         connection.query("UPDATE products SET ? WHERE ?", 
